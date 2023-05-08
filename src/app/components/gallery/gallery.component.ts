@@ -59,4 +59,17 @@ export class GalleryComponent implements OnInit{
   galleryClick(id: number): void {
     this.router.navigate(['/video', id])
   }
+  onOptionReleaseSelected(value: string) {
+    if (value === 'old') {
+      this.videos.sort((a,b) => {
+        return new Date(a.releaseDate).getTime() - new Date(b.releaseDate).getTime()
+      })
+      
+    } else if (value === 'new') {
+      this.videos.sort((a,b) => {
+        return new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime()
+      })
+    }
+    this.updateGalleryItems()
+  }
 }

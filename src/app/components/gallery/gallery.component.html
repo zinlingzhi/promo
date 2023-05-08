@@ -1,5 +1,11 @@
 
 <app-loading *ngIf="isLoading"></app-loading>
+<div class="pt-4 pr-6 flex justify-end">
+    <select class="border border-gray-400 rounded-md p-2" #releaseSelect (change)="onOptionReleaseSelected(releaseSelect.value)">
+        <option value="new">Newest Release</option>
+        <option value="old">Oldest Release</option>
+    </select>
+</div>
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 md:p-6" *ngIf="!isLoading">
     <div *ngFor="let galleryItem of galleryItems">
         <div class="relative">
