@@ -56,4 +56,7 @@ export class GalleryComponent implements OnInit{
       }
     }
   }
+  galleryClick(id: number): void {
+    this.router.navigate(['/video', id])
+  }
 }

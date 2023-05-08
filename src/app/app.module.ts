@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { VideoComponent } from './components/video/video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     GalleryComponent,
-    LoadingComponent
+    LoadingComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
